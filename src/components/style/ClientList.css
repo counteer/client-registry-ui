@@ -1,0 +1,43 @@
+
+
+.content {
+    display: flex;
+    width: 80%;
+}
+
+.table-container {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 400px;
+    min-height: 200px;
+    margin-right: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #1a1a1a;
+
+
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ddd;
+}
+
+
+tr.selected {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
