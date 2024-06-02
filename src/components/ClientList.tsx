@@ -1,4 +1,3 @@
-// VehicleList.tsx
 import React, {useEffect, useState} from 'react';
 import {Client} from '../api/Client.ts';
 import './style/ClientList.css'

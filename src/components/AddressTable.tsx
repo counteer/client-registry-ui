@@ -5,9 +5,9 @@ import Field from "./Field.tsx";
 interface AddressTableProps {
     addresses: Address[],
     editing: boolean;
-    handleChange: (itemId: number|null, fieldName: string, newValue: string, addressId: number|null) => void;
-    itemId: number|null;
-    handleDelete: (clientId: number|null, addressId: number|null) => void;
+    handleChange: (itemId: number | null, fieldName: string, newValue: string, addressId: number | null) => void;
+    itemId: number | null;
+    handleDelete: (clientId: number | null, addressId: number | null) => void;
 }
 
 const AddressTable: React.FC<AddressTableProps> = ({addresses, editing, handleChange, itemId, handleDelete}) => {
@@ -30,7 +30,7 @@ const AddressTable: React.FC<AddressTableProps> = ({addresses, editing, handleCh
                            fieldName="city" subId={address.id}/></td>
                 <td><Field itemId={itemId} handleChange={handleChange} data={address.postal_code} editing={editing}
                            fieldName="postal_code" subId={address.id}/></td>
-                <td onClick={()=>handleDelete(itemId, address.id)}>Delete</td>
+                <td onClick={() => handleDelete(itemId, address.id)}>Delete</td>
             </tr>)}
         </tbody>
     </table>);

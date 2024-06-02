@@ -5,8 +5,8 @@ import Field from "./Field.tsx";
 interface PhoneTableProps {
     phones: PhoneNumber[];
     editing: boolean;
-    handleChange: (itemId: number|null, fieldName: string, newValue: string, phoneId:number|null) => void;
-    itemId: number|null;
+    handleChange: (itemId: number | null, fieldName: string, newValue: string, phoneId: number | null) => void;
+    itemId: number | null;
 }
 
 const PhoneTable: React.FC<PhoneTableProps> = ({phones, editing, handleChange, itemId}) => {
@@ -20,7 +20,8 @@ const PhoneTable: React.FC<PhoneTableProps> = ({phones, editing, handleChange, i
         </thead>
         <tbody>
         {phones.map(phone => <tr>
-            <td><Field itemId={itemId} handleChange={handleChange} editing={editing} data={phone.phone_number} fieldName="phone_number" subId={phone.id}/></td>
+            <td><Field itemId={itemId} handleChange={handleChange} editing={editing} data={phone.phone_number}
+                       fieldName="phone_number" subId={phone.id}/></td>
             <td onClick={() => alert("click")}>Delete</td>
         </tr>)}
         </tbody>
